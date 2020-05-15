@@ -1,1 +1,0 @@
-A news application using ionic and angular by integrating free news api.
