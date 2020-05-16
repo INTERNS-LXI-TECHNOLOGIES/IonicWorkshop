@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.page.scss'],
 })
 export class AboutPage implements OnInit {
-
+  appVersion:string='1.0';
   constructor() { }
 
   ngOnInit() {

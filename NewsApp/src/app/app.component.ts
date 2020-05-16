@@ -15,11 +15,11 @@ export class AppComponent implements OnInit {
     {
       title: 'headlines',
       url: '/headlines',
-      icon: 'mail'
+      icon: 'home'
     },
     {
-      title: 'favorites',
-      url: '/favorites',
+      title: 'favourites',
+      url: '/favourites',
       icon: 'heart'
     },
     {
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
       icon: 'information-circle'
     }
   ];
-  public labels = [ 'notes'];
+
 
   constructor(
     private platform: Platform,

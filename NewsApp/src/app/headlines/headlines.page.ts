@@ -17,7 +17,7 @@ export class HeadlinesPage implements OnInit {
   
 
   getNews():void{
-    var url = 'http://newsapi.org/v2/top-headlines?' +'country=us&' +'apiKey=ad181e1ee3454ded8fea6a84d95a5190';
+    var url = 'http://newsapi.org/v2/top-headlines?country=in&' +'apiKey=ad181e1ee3454ded8fea6a84d95a5190';
     this.http.get(url)
     .subscribe(
       data => {
