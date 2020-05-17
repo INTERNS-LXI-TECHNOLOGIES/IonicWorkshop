@@ -9,7 +9,7 @@
 
 <ion-content>
 
-  <ion-card  *ngFor="let news of data" >
+  <ion-card  *ngFor="let news of data?.articles" >
     <ion-card-header>
       <a href={{news.url}}><ion-card-title >{{news.title}}</ion-card-title></a>
       <img src={{news.urlToImage}}/>
