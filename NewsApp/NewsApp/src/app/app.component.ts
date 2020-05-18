@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -6,23 +6,21 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 @Component({
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss']
+  templateUrl: 'app.component.html'
 })
-export class AppComponent implements OnInit {
-  public selectedIndex = 0;
+export class AppComponent {
   public appPages = [
-   { title: 'Home',
+    {
+      title: 'Home',
       url: '/home',
       icon: 'home'
-  },
-  {
-    title: 'About',
-    url: '/about',
-    icon: 'help-circle-outline'
-  }
+    },
+    {
+      title: 'About',
+      url: '/about',
+      icon: 'help-circle-outline'
+    }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(
     private platform: Platform,
@@ -37,12 +35,5 @@ export class AppComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-  }
-
-  ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
   }
 }

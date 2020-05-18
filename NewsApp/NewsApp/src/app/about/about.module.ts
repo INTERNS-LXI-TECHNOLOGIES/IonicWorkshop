@@ -17,4 +17,5 @@ import { AboutPage } from './about.page';
   ],
   declarations: [AboutPage]
 })
+
 export class AboutPageModule {}
